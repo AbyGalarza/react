@@ -1,19 +1,17 @@
+import React from 'react';
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
+import CardList from './components/CardList/CardList';
+import SnackBar from './components/SnackBar/SnackBar';
 
 
 function App() {
 
-  let styleCustom = {
-    color : 'green',
-    border : '1 px solid',
-    marginBottom : 20
-  }
 
   return (
-    <div className="App" style={styleCustom}>
-      <NavBar> </NavBar>
-      <h1 className='title'> Ecommerce 31180 </h1>
+    <div className="App">
+      <NavBar />
+      <CardList/>
 
     </div>
   );
