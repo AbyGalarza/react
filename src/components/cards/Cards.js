@@ -3,6 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardActions, { Button } from "@mui/material";
 import './Cards.css';
+import ItemCount from "../ItemCount/ItemCount";
 
 const CardItem = ({image, title, price}) => {
     return (
@@ -14,7 +15,8 @@ const CardItem = ({image, title, price}) => {
                     </div>
                     <p>{title}</p>
                     <span>$ {price}</span>
-                    <Button variant={'outlined'}>Detalle</Button>
+                    <Button>Detalle</Button>
+                    <ItemCount></ItemCount>
                 </div >
             </CardContent>
         </Card>

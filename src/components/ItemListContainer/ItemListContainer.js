@@ -1,9 +1,10 @@
 import React from "react"
 import { Grid } from "@mui/material"
 import CardItem from "../cards/Cards"
+import './ItemListContainer.css'
 
 
-const CardList = ()=> {
+const ItemListContainer = ()=> {
     return(
         <>
         <h2>Budines</h2>
@@ -22,4 +23,4 @@ const CardList = ()=> {
     )
 }
 
-export default CardList
+export default ItemListContainer
