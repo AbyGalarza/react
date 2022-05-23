@@ -1,7 +1,8 @@
 import React from "react"
 import { Grid } from "@mui/material"
-import CardItem from "../cards/Cards"
+import CardItem from "../Cards/Cards"
 import './ItemListContainer.css'
+
 
 
 const ItemListContainer = ()=> {
