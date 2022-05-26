@@ -34,29 +34,29 @@ const ItemListContainer = () => {
     },
   ]
 
+  const getProducts = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(products)
+        }, 2000);
+    })
+}
+useEffect(() => {
+    getProducts()
+      .then((res) => {
+        //console.log("Respuesta promesa: ",res)
+        setProducts(res)
+      })
+      .catch((err) => {
+        //console.log("Falló la llamada.",err)
+      })
+      .finally(() => {
+        //console.log("Terminó la promesa.")
+      })
+  }, [])
 
 
 
-
-  return (
-    <>
-      {console.log("state products: ", products)}
-      <h2>Budines</h2>
-      <Grid container className='general-container'>
-        {
-          productos.map(({title,price,image,id}) => {
-            return (
-              <>
-                <Grid item md={3} key={id}>
-                  <CardItem title={title} price={price} image={image} />
-                </Grid>
-              </>
-            )
-          })
-        }
-      </Grid>
-    </>
-  )
 }
 
 export default ItemListContainer

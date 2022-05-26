@@ -2,26 +2,27 @@ import React, { useState } from "react";
 import Cards from '../Item/Item';
 import { Grid } from "@mui/material";
 
-const getProducts = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(products)
-        }, 2000);
-    })
+const ItemList = ()=>{
+    return (
+        <>
+          {console.log("state products: ", products)}
+          <h2>Budines</h2>
+          <Grid container className='general-container'>
+            {
+              productos.map(({title,price,image,id}) => {
+                return (
+                  <>
+                    <Grid item md={3} key={id}>
+                      <CardItem title={title} price={price} image={image} />
+                    </Grid>
+                  </>
+                )
+              })
+            }
+          </Grid>
+        </>
+      )
 }
-useEffect(() => {
-    getProducts()
-      .then((res) => {
-        //console.log("Respuesta promesa: ",res)
-        setProducts(res)
-      })
-      .catch((err) => {
-        //console.log("Falló la llamada.",err)
-      })
-      .finally(() => {
-        //console.log("Terminó la promesa.")
-      })
-  }, [])
 
-export default getProducts
+export default ItemList
 
