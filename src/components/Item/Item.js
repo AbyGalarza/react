@@ -2,7 +2,7 @@ import React from "react";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardActions, { Button } from "@mui/material";
-import './Cards.css';
+import './Item.css';
 import ItemCount from "../ItemCount/ItemCount";
 
 const CardItem = ({image, title, price}) => {
