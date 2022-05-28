@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { Grid } from "@mui/material"
 import CardItem from "../Item/Item"
 import './ItemListContainer.css'
+import ItemList from "../ItemList/ItemList"
 
 
 
@@ -37,10 +38,11 @@ const ItemListContainer = () => {
   const getProducts = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(products)
+            resolve(productos)
         }, 2000);
     })
 }
+
 useEffect(() => {
     getProducts()
       .then((res) => {
@@ -55,7 +57,11 @@ useEffect(() => {
       })
   }, [])
 
-
+  return(
+    <>
+    <ItemList productos = {products}/>
+    </>
+  )
 
 }
 

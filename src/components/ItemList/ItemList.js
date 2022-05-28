@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import Cards from '../Item/Item';
 import { Grid } from "@mui/material";
+import CardItem from "../Item/Item";
 
-const ItemList = ()=>{
+const ItemList = ({productos})=>{
     return (
         <>
-          {console.log("state products: ", products)}
+          {console.log("state products: ", productos)}
           <h2>Budines</h2>
           <Grid container className='general-container'>
             {
@@ -17,7 +18,7 @@ const ItemList = ()=>{
                     </Grid>
                   </>
                 )
-              })
+              }) 
             }
           </Grid>
         </>
