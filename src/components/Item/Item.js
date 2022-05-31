@@ -11,7 +11,7 @@ const CardItem = ({image, title, price}) => {
             <CardContent>
                 <div className="card-item">
                     <div>
-                        <img src={`./${image}`} />
+                        <img src={`./${image}`}/>
                     </div>
                     <p>{title}</p>
                     <span>$ {price}</span>
