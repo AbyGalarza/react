@@ -1,6 +1,6 @@
 import React from "react";
 
-const ItemDetail = ()=>{
+const ItemDetail = (data)=>{
     console.log("Data desde ItemDetail: ",data)
     return(
         <div>
