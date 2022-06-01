@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react"
-import { Grid } from "@mui/material"
-import CardItem from "../Item/Item"
 import './ItemListContainer.css'
 import ItemList from "../ItemList/ItemList"
 import productos from "../../utils/ProductsMocks"

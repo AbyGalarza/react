@@ -1,5 +1,6 @@
 import React from 'react';
 import './NavBar.css';
+import { Link } from 'react-router-dom';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
@@ -10,23 +11,53 @@ const NavBar = () => {
     <AppBar position="static" className='header-primary'>
       <Toolbar className='color'>
         <div className='container-logo'>
-          <img src='./logo.png'></img>
+          <Link to='/'><img src='./logo.png' alt='logo'></img></Link>
         </div>
         <ul className='navbar'>
           <li>
-            <Button disableRipple style={{ backgroundColor: 'transparent' }} variant='text' className='navbar__btn'>Inicio</Button>
+            <Button
+              disableRipple
+              style={{ backgroundColor: 'transparent' }}
+              variant='text'
+              className='navbar__btn'>
+              <Link to="/">Inicio</Link>
+            </Button>
           </li>
           <li>
-            <Button disableRipple style={{ backgroundColor: 'transparent' }} variant='text' className='navbar__btn'>Productos</Button>
+            <Button
+              disableRipple
+              style={{ backgroundColor: 'transparent' }}
+              variant='text'
+              className='navbar__btn'>
+              Productos
+            </Button>
           </li>
           <li>
-            <Button disableRipple style={{ backgroundColor: 'transparent' }} variant='text' className='navbar__btn'>Preguntas Frecuentes</Button>
+            <Button
+              disableRipple
+              style={{ backgroundColor: 'transparent' }}
+              variant='text'
+              className='navbar__btn'>
+              Preguntas Frecuentes
+            </Button>
           </li>
           <li>
-            <Button disableRipple style={{ backgroundColor: 'transparent' }} variant='text' className='navbar__btn'>Contacto</Button>
+            <Button
+              disableRipple
+              style={{ backgroundColor: 'transparent' }}
+              variant='text'
+              className='navbar__btn'>
+              <Link to="/contact">Contacto</Link>
+            </Button>
           </li>
           <li>
-            <Button disableRipple style={{ backgroundColor: 'transparent' }} variant='text' className='navbar__btn'> <CartIcon></CartIcon> </Button>
+            <Button
+              disableRipple
+              style={{ backgroundColor: 'transparent' }}
+              variant='text'
+              className='navbar__btn'>
+              <CartIcon></CartIcon>
+            </Button>
           </li>
         </ul>
         <Button color="inherit">Login</Button>
