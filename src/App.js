@@ -23,7 +23,7 @@ function App() {
           <Route path='*' element={<h1>404 - Página no encontrada </h1>}/>
         </Routes>
         <ItemDetailContainer />
-      </BrowserRouter>
+      </BrowserRouter> 
 
     </div>
   );
