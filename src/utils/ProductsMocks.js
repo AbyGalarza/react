@@ -3,6 +3,7 @@ const productos = [
       title: 'Budín frutos rojos',
       price: 400,
       image: 'budinFrutos.jpeg',
+      category: 'budin',
       description: '',
       stock: 5,
       id: 0
@@ -11,6 +12,7 @@ const productos = [
       title: 'Budín limón',
       price: 400,
       image: 'budinLimon.jpg',
+      category: 'budin',
       description: '',
       stock: 5,
       id: 1
@@ -19,6 +21,7 @@ const productos = [
       title: 'Budín chips de chocolate',
       price: 400,
       image: 'budinChips.jpg',
+      category: 'budin',
       description: '',
       stock: 5,
       id: 2

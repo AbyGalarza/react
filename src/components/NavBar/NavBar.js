@@ -1,12 +1,24 @@
 import React from 'react';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import CartIcon from '../CartIcon/CartIcon';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 
 const NavBar = () => {
+    const [anchorEl, setAnchorEl] = useState(null)
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+      setAnchorEl(null);
+    };
+
   return (
     <AppBar position="static" className='header-primary'>
       <Toolbar className='color'>
@@ -25,12 +37,30 @@ const NavBar = () => {
           </li>
           <li>
             <Button
+              id="basic-button"
+              aria-controls={open ? 'basic-menu' : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? 'true' : undefined}
+              onClick={handleClick}
               disableRipple
               style={{ backgroundColor: 'transparent' }}
               variant='text'
-              className='navbar__btn'>
+              className='navbar__btn'
+            >
               Productos
             </Button>
+            <Menu
+              id="basic-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+                'aria-labelledby': 'basic-button',
+              }}
+            >
+              <MenuItem onClick={handleClose}>Budines</MenuItem>
+              <MenuItem onClick={handleClose}>Tartas</MenuItem>
+            </Menu>
           </li>
           <li>
             <Button

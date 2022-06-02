@@ -6,6 +6,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import Home from './components/Pages/Home';
 import Contacto from './components/Pages/Contacto';
 import Detalle from './components/Pages/Detalle';
+import ProductList from './components/Pages/ProductList';
 
 
 function App() {
@@ -18,8 +19,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/contact' element={<Contacto/>}/>
-          <Route path='/contact' element={<Contacto/>}/>
-          <Route path='/product/:id' element={<Detalle/>}/>
+          <Route path='/product/:category' element={<ProductList/>}/>
+          <Route path='/products/:id' element={<Detalle/>}/>
           <Route path='*' element={<h1>404 - Página no encontrada </h1>}/>
         </Routes>
         <ItemDetailContainer />
