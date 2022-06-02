@@ -19,11 +19,11 @@ function App() {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/contact' element={<Contacto/>}/>
-          <Route path='/product/:category' element={<ProductList/>}/>
+          <Route path='/products' element={<ProductList/>}/>
+
           <Route path='/products/:id' element={<Detalle/>}/>
           <Route path='*' element={<h1>404 - Página no encontrada </h1>}/>
         </Routes>
-        <ItemDetailContainer />
       </BrowserRouter> 
 
     </div>

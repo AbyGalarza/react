@@ -26,6 +26,15 @@ const productos = [
       stock: 5,
       id: 2
     },
+    {
+      title: 'Tarta conitos de dulce de leche',
+      price: 400,
+      image: 'Conitos.jpeg',
+      category: 'tartas',
+      description: '',
+      stock: 5,
+      id: 3
+    }
   ]
 
 const producto = {

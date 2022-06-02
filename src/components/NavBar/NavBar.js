@@ -19,6 +19,8 @@ const NavBar = () => {
       setAnchorEl(null);
     };
 
+    const categories = ["budines", "tartas"]
+
   return (
     <AppBar position="static" className='header-primary'>
       <Toolbar className='color'>
@@ -58,8 +60,9 @@ const NavBar = () => {
                 'aria-labelledby': 'basic-button',
               }}
             >
-              <MenuItem onClick={handleClose}>Budines</MenuItem>
-              <MenuItem onClick={handleClose}>Tartas</MenuItem>
+              {categories.map( (cat)=>{
+                return <MenuItem onClick={handleClose}><Link to={`/products/${cat}`}>{cat}</Link></MenuItem>
+              })}
             </Menu>
           </li>
           <li>

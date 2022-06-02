@@ -18,7 +18,7 @@ const CardItem = ({image, title, price, id}) => {
                     <p>{title}</p>
                     <span>$ {price}</span>
                     <Button>
-                        <Link to={`/product/${id}`}>Detalle</Link>
+                        <Link to={`/products/${id}`}>Detalle</Link>
                     </Button>
                     <ItemCount></ItemCount>
                 </div >
