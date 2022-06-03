@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import productos, {producto} from "../../utils/ProductsMocks";
+import productos from "../../utils/ProductsMocks";
 import { useParams } from "react-router-dom";
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
 
