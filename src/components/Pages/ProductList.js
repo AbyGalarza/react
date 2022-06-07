@@ -8,6 +8,13 @@ const ProductList = ()=>{
     const [products, setProducts] = useState([])
     const {category} = useParams()
   
+    const getProducts = ()  => {
+        return new Promise((resolve, reject) => {
+                resolve(productos)
+        })
+    }
+
+
   useEffect(() => {
       setProducts([])
       console.log("category:", category)
@@ -16,12 +23,6 @@ const ProductList = ()=>{
           filterByCategory(response)
         })
     }, [category])
-
-    const getProducts = ()  => {
-        return new Promise((resolve, reject) => {
-                resolve(products)
-        })
-    }
 
     const filterByCategory =(array)=>{
         return array.map((item)=>{

@@ -2,6 +2,7 @@ import React from "react";
 import { Grid } from "@mui/material";
 import CardItem from "../Item/Item";
 import './ItemList.css'
+import ProductList from "../Pages/ProductList";
 
 const ItemList = ({productos})=>{
     return (
