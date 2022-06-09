@@ -9,8 +9,9 @@ const ItemCount = ({cantidad, actualizarCantidad})=>{
 
     const addCount = ()=>{
         setCount(count + 1)
+        actualizarCantidad(count)
     }
-    actualizarCantidad(count)
+
     const removeCount = ()=>{
         setCount(count - 1)
     }
