@@ -25,7 +25,7 @@ const NavBar = () => {
     <AppBar position="static" className='header-primary'>
       <Toolbar className='color'>
         <div className='container-logo'>
-          <Link to='/'><img src='./logo.png' alt='logo'></img></Link>
+          <Link to='/cart'><img src='./logo.png' alt='logo'></img></Link>
         </div>
         <ul className='navbar'>
           <li>

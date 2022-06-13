@@ -7,6 +7,7 @@ import Contacto from './components/Pages/Contacto';
 import Detalle from './components/Pages/Detalle';
 import ProductList from './components/Pages/ProductList';
 import { CartProvider } from './context/CartContext';
+import Cart from './components/Pages/Cart';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/contact' element={<Contacto />} />
+            <Route path='/cart' element={<Cart/>} />
             <Route path='/products' element={<ProductList />} />
             <Route path='/products/:id' element={<Detalle />} />
             <Route path='*' element={<h1>404 - Página no encontrada </h1>} />
