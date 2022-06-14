@@ -3,7 +3,7 @@ import { useContext } from "react"
 import { Container, Button } from "@mui/material"
 import CartContext from "../../context/CartContext"
 import { Delete } from "@mui/icons-material"
-import './Cart.css';
+import Box from '@mui/material/Box';
 
 const Cart = () => {
     const { cartListItems, totalPrice } = useContext(CartContext)
@@ -12,13 +12,13 @@ const Cart = () => {
         <Container className='container-general'> 
         <h2>Checkout: </h2>
         <div className='cart-section'>
-            <div className='col-cart-table__head table-head'>
-                <h2>Producto</h2>
-                <h2>Descripcion</h2>
-                <h2>Precio Unitario</h2>
-                <h2>Cantidad</h2>
-                <h2>Quitar</h2>
-            </div>
+            <Box component="div" sx={{display: 'flex', justifyContent: 'space-around'}} className="col-cart-table__head">
+                <Box component="p" sx={{padding: '2%'}}>Producto</Box>
+                <Box component="p" sx={{padding: '2%'}}>Descripción</Box>
+                <Box component="p" sx={{padding: '2%'}}>Precio unitario</Box>
+                <Box component="p" sx={{padding: '2%'}}>Cantidad</Box>
+                <Box component="p" sx={{padding: '2%'}}>Quitar</Box>
+            </Box>
             {cartListItems.map((item)=> {
                 const {id, title, image, price} = item
                 return(
