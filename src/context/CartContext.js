@@ -19,7 +19,8 @@ const CartProvider = ({children})=>{
     
     const data = {
         cartListItems,
-        addProductToCart
+        addProductToCart,
+        totalPrice
     }
 
     return(

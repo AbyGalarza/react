@@ -1,5 +1,5 @@
 
-   
+import React from 'react';
 import { useState, useContext } from 'react';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Menu from '@mui/material/Menu';
@@ -40,7 +40,7 @@ const CartWidget = () =>  {
                     {cartListItems.length === 0 && (
                         <>
                             <p>No hay productos agregados al carrito</p>
-                            <Link to="/products/budines" >Empezar a comprar</Link>
+                            <Link to="/products" >Empezar a comprar</Link>
                         </>
                     )}
                     {cartListItems.map( (item) => {

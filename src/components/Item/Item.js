@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { Button } from "@mui/material";
@@ -8,8 +8,10 @@ import { Link } from "react-router-dom";
 import CartContext from "../../context/CartContext";
 
 const CardItem = ({image, title, price, id}) => {
-    
+    const [cantidad, setCantidad] = useState(0)
+    const [showButton, setShowButton] = useState(false)
     const {addProductToCart} = useContext(CartContext)
+    
     return (
         <Card sx={{ minWidth: 275 }}>
             <CardContent>
@@ -25,7 +27,14 @@ const CardItem = ({image, title, price, id}) => {
                     <Button variant={'contained'} onClick={()=>addProductToCart({image, title, price, id})}>
                         Agregar al carrito
                     </Button>
-                    <ItemCount></ItemCount>
+                    {!showButton ? <>
+                    <ItemCount
+                    cantidad={cantidad}
+                    setShowButton={setShowButton}
+                    actualizarCantidad={setCantidad} />
+                    </>
+                    :
+                    <Button variant="outlined"><Link to='/cart' >Checkout</Link></Button>}
                 </div >
             </CardContent>
         </Card>

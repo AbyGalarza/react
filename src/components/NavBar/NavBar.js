@@ -8,6 +8,7 @@ import Button from '@mui/material/Button';
 import CartIcon from '../CartIcon/CartIcon';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
     const [anchorEl, setAnchorEl] = useState(null)
@@ -89,7 +90,7 @@ const NavBar = () => {
               style={{ backgroundColor: 'transparent' }}
               variant='text'
               className='navbar__btn'>
-              <CartIcon></CartIcon>
+              <CartWidget></CartWidget>
             </Button>
           </li>
         </ul>
