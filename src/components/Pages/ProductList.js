@@ -3,6 +3,9 @@ import { useEffect, useState } from "react";
 import productos from "../../utils/ProductsMocks";
 import { useParams } from "react-router-dom";
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
+// Firestore
+import { collection, getDocs } from "firebase/firestore";
+import db from "../../utils/firebaseConfig";
 
 const ProductList = ()=>{
     const [products, setProducts] = useState([])
@@ -23,6 +26,11 @@ const ProductList = ()=>{
           filterByCategory(response)
         })
     }, [category])
+
+    const Products = async ()=> {
+        const productSnapshot = await getDocs(collection(db, "productos"));
+        console.log("productSnapshot", productSnapshot)
+    }
 
     const filterByCategory =(array)=>{
         return array.map((item)=>{

@@ -3,8 +3,6 @@ import './ItemListContainer.css'
 import ItemList from "../ItemList/ItemList"
 import productos from "../../utils/ProductsMocks"
 
-
-
 const ItemListContainer = () => {
   const [products, setProducts] = useState([])
 
