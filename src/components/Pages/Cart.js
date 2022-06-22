@@ -24,13 +24,13 @@ const Cart = () => {
                 return(
                     <div className='cart-table__content' key={id}>
                     <div className='cart-table__content-img'>
-                        <img src={`/${image}`} />
+                        <img src={`/${item.image}`} />
                     </div>
                     <div className='cart-table__content-title'>
-                        <p>{title}</p>
+                        <p>{item.title}</p>
                     </div>
                     <div className='cart-table__content-price'>
-                        <p>$ {price}</p>
+                        <p>$ {item.price}</p>
                     </div>
                     <div className='cart-table__content-quantity'>
                         <p>1</p>

@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import productos from "../../utils/ProductsMocks";
+import productos, { producto } from "../../utils/ProductsMocks";
 import { useParams } from "react-router-dom";
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
 // Firestore
@@ -20,16 +20,21 @@ const ProductList = ()=>{
 
   useEffect(() => {
       setProducts([])
-      console.log("category:", category)
       getProducts()
-        .then((response) => {
-          filterByCategory(response)
+        .then((productos) => {
+          category ? filterByCategory(productos, category) : setProducts(productos)
         })
     }, [category])
 
     const Products = async ()=> {
         const productSnapshot = await getDocs(collection(db, "productos"));
         console.log("productSnapshot", productSnapshot)
+        const productList = productSnapshot.doc.map((doc)=>{
+            let product = doc.data()
+            product.id = doc.id
+            return product
+        })
+        return productList
     }
 
     const filterByCategory =(array)=>{
